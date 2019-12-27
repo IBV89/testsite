@@ -1,14 +1,14 @@
 <?php
 
-
 class DB
 {
     protected $data = [];
     protected $dbh;
 
-    public function __construct($dsn, $user, $pass)
+    public function __construct()
     {
-        $this->dbh = new PDO($dsn, $user, $pass);
+        $this->dbh = new PDO('mysql:host=localhost; dbname=test',
+            'root', '');
     }
 
     public function execute($sql, $data = [])
