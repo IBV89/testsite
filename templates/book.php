@@ -3,17 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <title>Гостевая книга</title>
-    <link rel="stylesheet" href="includes/style.css">
+    <link rel="stylesheet" href="templates/includes/style.css">
 </head>
 <body>
 <?php
 include_once __DIR__ . '/includes/header.php';
 ?>
-<p>Запись гостевой книги 1</p><br>
-<p>Запись гостевой книги 2</p><br>
-<p>Запись гостевой книги 3</p><br>
-<p>Запись гостевой книги 4</p><br>
-<p>Запись гостевой книги 5</p><br>
+<?php
+foreach ($this->data['data'] as $k=>$v){
+    ?>
+    <p><?=$v['id'] . '. ' .  $v['name'] . ': ' . $v['text']; ?></p><br>
+<?php
+}
+?>
+
 <form action="#" method="post">
     <input type="text" name="text">
     <input type="submit" name="submit">
