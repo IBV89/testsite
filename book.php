@@ -1,4 +1,5 @@
 <?php
+
 require_once __DIR__ . '/autoload.php';
 
 $book = new \Models\Book\Book();

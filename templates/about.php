@@ -10,8 +10,8 @@
 include_once __DIR__ . '/includes/header.php';
 ?>
 <div class="about">
-    <h1><?=$data['title'];?></h1>
-    <p><?=$data['text'];?></p>
+    <h1><?=$this->data['data']['title'];?></h1>
+    <p><?=$this->data['data']['text'];?></p>
 </div>
 </body>
 </html>

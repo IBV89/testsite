@@ -13,7 +13,7 @@ include_once __DIR__ . '/includes/header.php';
 <div class="container">
     <div class="gallery">
         <?php
-        foreach ($data as $k=>$v){
+        foreach ($this->data['data'] as $k=>$v){
             ?>
             <figure class="item item--<?=$k+1?>">
                 <img src="templates/images/<?=$v['title'];?>" class="img" alt="<?=$v['title'];?>">

@@ -5,5 +5,7 @@ require __DIR__ . '/autoload.php';
 $about = new \Models\About\About();
 $data = $about->getText();
 
+$view = new View();
+$view->assign('data', $data);
 
-include_once __DIR__ . '/templates/about.php';
+$view->display('about.php');

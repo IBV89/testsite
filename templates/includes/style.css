@@ -36,9 +36,10 @@ a:hover{
 }
 .gallery{
     display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: repeat(8, 5vw);
+    grid-template-columns: repeat(3, 1fr);
+    /*grid-template-rows: repeat(8, 5vw);*/
     grid-gap: 15px;
+    grid-auto-rows: minmax(100px, auto);
 
 }
 .img{
@@ -47,7 +48,7 @@ a:hover{
     object-fit: cover;
 }
 
-.item--1{
+/*.item--1{
     grid-column-start: 1;
     grid-column-end: 3;
     grid-row-start: 1;
@@ -82,7 +83,7 @@ a:hover{
     grid-column-end: 9;
     grid-row-start: 6;
     grid-row-end: 9;
-}
+}**/
 .about p{
     margin: 5em;
 }
