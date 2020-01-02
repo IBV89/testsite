@@ -3,15 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>Админ панель</title>
-    <link rel="stylesheet" href="includes/style3.css">
+    <link rel="stylesheet" href="templates/includes/style3.css">
 </head>
 <body>
+<?php include_once __DIR__ . '/includes/header.php'; ?>
 <div class="about menu">
     <p class="name">Обо мне</p>
-    <textarea name="change">
-        ddd
-    </textarea>
-    <button name="change">Редактировать</button>
+    <form action="includes/panel.php" method="post">
+        <textarea name="change">
+            <?= $this->data['data']['text'];?>
+        </textarea>
+        <button name="changeButton">Редактировать</button>
+    </form>
 </div>
 <div class="img menu">
     <p class="name">Загрузка фото</p>
@@ -22,7 +25,9 @@
 </div>
 <div class="book menu">
     <p class="name">Гостевая книга</p>
-    <p>Запись гостевой</p><a href="">Удалить</a>
+    <form action="includes/panel.php" method="post">
+        <p>Запись гостевой</p>
+    </form>
 </div>
 
 </body>

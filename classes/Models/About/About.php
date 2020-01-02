@@ -17,4 +17,10 @@ class About
         }
         return $this->text;
     }
+    public function updateText($text)
+    {
+        $sql = 'UPDATE ' . $this->table . ' SET text = ' . '\'' . $text . '\'';
+        $db = new \DB();
+        $db->execute($sql);
+    }
 }
