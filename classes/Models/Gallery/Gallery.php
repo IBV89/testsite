@@ -18,4 +18,13 @@ class Gallery
         }
         return $this->data;
     }
+    public function upload($img)
+    {
+        $sql = 'INSERT INTO ' . $this->table . ' (title) VALUES(:title)';
+        $data = [':title' => $img];
+        $db = new \DB();
+        $db->execute($sql, $data);
+
+
+    }
 }

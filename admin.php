@@ -12,6 +12,10 @@ if (isset($_COOKIE['salt']) && password_verify($_SESSION['name'],$_COOKIE['salt'
     $data = $about->getText();
     $view->assign('data', $data);
 
+    $book = new \Models\Book\Book();
+    $guest = $book->getData();
+    $view->assign('guest', $guest);
+
 
     $view->display('panel.php');
 

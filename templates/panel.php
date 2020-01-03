@@ -18,15 +18,22 @@
 </div>
 <div class="img menu">
     <p class="name">Загрузка фото</p>
-    <form action="" enctype="multipart/form-data" method="post">
+    <form action="includes/panel.php" enctype="multipart/form-data" method="post">
         <input type="file" name="myimg">
-        <input type="button" name="go" value="go">
+        <input type="submit" name="goimg" value="go">
     </form>
 </div>
 <div class="book menu">
     <p class="name">Гостевая книга</p>
     <form action="includes/panel.php" method="post">
-        <p>Запись гостевой</p>
+        <?php
+        foreach ($this->data['guest'] as $k=>$v) {
+            ?>
+            <p><?=$v['id'] . '. ' . $v['name'];?> : <?=$v['text'];?> <input type="checkbox" name="book[]" value="<?=$v['id'];?>"></p>
+        <?php
+        }
+        ?>
+        <input type="submit" name="delete" value="Удалить">
     </form>
 </div>
 

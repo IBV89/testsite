@@ -1,7 +1,6 @@
 <?php
 
-require_once __DIR__ . '/classes/DB.php';
-require_once __DIR__ . '/includes/config.php';
+require_once __DIR__ . '/autoload.php';
 
 $db = new DB($dsn, $user, $pass);
 

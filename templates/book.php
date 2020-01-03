@@ -17,9 +17,10 @@ foreach ($this->data['data'] as $k=>$v){
 }
 ?>
 
-<form action="#" method="post">
-    <input type="text" name="text">
-    <input type="submit" name="submit">
+<form action="includes/book.php" method="post">
+    <input type="text" name="name" placeholder="Name">
+    <input type="text" name="text" placeholder="Text">
+    <input type="submit" name="add">
 </form>
 </body>
 </html>
