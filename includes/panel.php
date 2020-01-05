@@ -32,6 +32,7 @@ if (isset($_COOKIE['salt']) && password_verify($_SESSION['name'],$_COOKIE['salt'
             $guest[] = $v;
             $book->delete($v);
         }
+        unset($_POST['delete']);
         header('Location: ../admin.php');
     }
 
