@@ -2,7 +2,7 @@
 
 require_once __DIR__ . '/autoload.php';
 
-$db = new DB($dsn, $user, $pass);
+$db = new DB();
 
 $sql = 'CREATE TABLE IF NOT EXISTS about (
         title VARCHAR(100) NOT NULL,
